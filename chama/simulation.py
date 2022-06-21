@@ -378,6 +378,7 @@ class GaussianPuff:
         self.grid = grid
         self.tstep = tstep
 
+        # Creates a list of time steps determined by tstep ie [0,2,4,6,...,100] for tstep = 2 and tend = 100
         times = [i * tstep for i in range(int(self.tend / tstep) + 1)]
 
         conc_list = []
@@ -385,6 +386,8 @@ class GaussianPuff:
         for t in times:
             
             # Extract the puff data at time t
+            # puff df has unique values in column 'T' equal to multiples of tpuff or time between puffs ie tpuff = 50 (0,50,100)
+            # trying to figure out what the heck this mask is doing.
             mask = (self.puff['T'] >= t - 0.1 * self.tpuff) \
                    & (self.puff['T'] <= t + 0.1 * self.tpuff)
             temp = self.puff.loc[mask].copy()  
