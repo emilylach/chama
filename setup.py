@@ -3,8 +3,8 @@ from distutils.core import Extension
 import os
 import re
 
-DISTNAME = 'chama'
-PACKAGES = ['chama']
+DISTNAME = 'chama_local'
+PACKAGES = ['chama_local']
 EXTENSIONS = []
 DESCRIPTION = 'Sensor Placement Optimization.'
 AUTHOR = 'Chama developers'
@@ -24,7 +24,7 @@ with open(os.path.join(file_dir, 'README.md'), encoding='utf-8') as f:
     LONG_DESCRIPTION = f.read()
     
 # get version from __init__.py
-with open(os.path.join(file_dir, 'chama', '__init__.py')) as f:
+with open(os.path.join(file_dir, 'chama_local', '__init__.py')) as f:
     version_file = f.read()
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
                               version_file, re.M)

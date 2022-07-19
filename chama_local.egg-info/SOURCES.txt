@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+chama_local/__init__.py
+chama_local/graphics.py
+chama_local/impact.py
+chama_local/optimize.py
+chama_local/sensors.py
+chama_local/simulation.py
+chama_local/utils.py
+chama_local.egg-info/PKG-INFO
+chama_local.egg-info/SOURCES.txt
+chama_local.egg-info/dependency_links.txt
+chama_local.egg-info/not-zip-safe
+chama_local.egg-info/requires.txt
+chama_local.egg-info/top_level.txt
