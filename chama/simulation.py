@@ -425,7 +425,7 @@ class GaussianPuff:
                                                         conc_at_t.ravel()]),
                                      columns=['X', 'Y', 'Z', 'S'])
             conc_at_t['T'] = t
-            conc_list.append(conc_at_t)
+            conc_list.concat(conc_at_t)
 
         self.conc = pd.concat(conc_list, ignore_index=True)
         self.conc = self.conc[['X', 'Y', 'Z', 'T', 'S']]
